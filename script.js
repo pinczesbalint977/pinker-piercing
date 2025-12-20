@@ -87,7 +87,7 @@ document.getElementById('saveBtn').onclick = async ()=>{
   });
 
   pdf.addImage(img.toDataURL(),'PNG',0,0,img.width,img.height);
-  pdf.save("Szülői_beleegyező_nyilatkozat.pdf");
+  pdf.save("Piercing_beleegyező_nyilatkozat.pdf");
 
   document.getElementById('modal').classList.add('show');
 };
