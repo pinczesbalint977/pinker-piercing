@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Pinker Tattoo — Beleegyező nyilatkozat</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<link rel="shortcut icon" href="icon.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wrap" id="paper">
+
+  <div class="header">
+    <div class="logo">
+      <img src="icon.png" alt="logo">
+      <div>
+        <div class="title">Pinker Tattoo</div>
+        <div class="title-small">
+          PIERCING HOZZÁJÁRULÁSI,<br>
+          FELELŐSSÉGELHÁRÍTÁSI ÉS ADATKEZELÉSI NYILATKOZAT
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="left" id="leftColumn">
+
+      <p><strong>Alulírott, az alábbi személyes adatokkal:</strong></p>
+
+      <label class="field">Név:
+        <input type="text">
+      </label>
+
+      <label class="field">Születési dátum:
+        <input type="text">
+      </label>
+
+      <label class="field">Személyi igazolvány szám:
+        <input type="text">
+      </label>
+
+      <label class="field">Telefonszám:
+        <input type="text">
+      </label>
+
+      <label class="field">E-mail cím:
+        <input type="email">
+      </label>
+
+      <p class="small">
+        Ezúton kijelentem, hogy saját elhatározásomból, megfelelő tájékoztatás után
+        <strong> piercing behelyezést</strong> kívánok igénybe venni a
+        Pinker Tattoo szalonban.
+      </p>
+
+      <div class="section-title">1. Egészségügyi nyilatkozat</div>
+      <p class="small">
+        Nem állok alkohol vagy tudatmódosító szerek hatása alatt.<br>
+        Nem szenvedek olyan betegségben, amely a beavatkozás szempontjából kockázatot jelentene.<br>
+        Tudomásul veszem, hogy a beavatkozás nem orvosi kezelés.<br>
+        A beavatkozás előtt és után megfelelő tájékoztatást kaptam.
+      </p>
+
+      <div class="section-title">2. Felelősségelhárítás</div>
+      <p class="small">
+        Tudomásul veszem, hogy a piercing kockázatokkal járhat
+        (allergiás reakció, gyulladás, vérzés, hegesedés).<br>
+        A Szalon nem vonható felelősségre az általam elhanyagolt utókezelésből eredő problémákért.<br>
+        A szolgáltatást saját felelősségemre veszem igénybe.
+      </p>
+
+      <div class="section-title">3. Lemondó nyilatkozat</div>
+      <p class="small">
+        Lemondok minden jogi igényérvényesítésről a Szalonnal szemben,
+        kivéve szándékos károkozás vagy súlyos gondatlanság esetén.<br>
+        Kijelentem, hogy a beavatkozás részleteit megértettem.
+      </p>
+
+      <div class="section-title">4. Adatkezelési hozzájárulás</div>
+      <p class="small">
+        Hozzájárulok, hogy a Szalon a személyes adataimat jogszabály szerint kezelje.<br>
+        Tudomásul veszem, hogy adataimat harmadik félnek nem adják ki.<br>
+        Jogomban áll adataimhoz hozzáférni, azokat módosítani vagy törölni.
+      </p>
+
+      <label class="field">Dátum:
+        <input type="date">
+      </label>
+
+      <div style="margin-top:20px">
+        <strong>Vendég aláírása:</strong>
+        <div class="sig-wrap">
+          <canvas id="sigCanvas"></canvas>
+        </div>
+      </div>
+
+      <div class="tattosigno">
+        <h3>Szakember aláírása:</h3>
+        <img src="signo.png" alt="">
+      </div>
+
+      <div class="sig-buttons">
+        <button type="button" id="clearSig" class="secondary">Aláírás törlése</button>
+        <button type="button" id="saveBtn" class="save-btn">Mentés PDF-be</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="card">
+    <h3>Köszönjük!</h3>
+    <p>A nyilatkozat mentése sikeres.</p>
+    <button id="modalClose">OK</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
