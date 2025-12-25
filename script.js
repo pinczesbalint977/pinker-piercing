@@ -87,7 +87,22 @@ document.getElementById('saveBtn').onclick = async ()=>{
   });
 
   pdf.addImage(img.toDataURL(),'PNG',0,0,img.width,img.height);
-  pdf.save("Piercing_beleegyező_nyilatkozat.pdf");
+  
+  const nameInput = document.getElementById('clientName').value.trim();
+
+if(!nameInput){
+  alert("A név megadása kötelező!");
+  return;
+}
+
+// fájlnév tisztítása (ékezetek, szóközök)
+const safeName = nameInput
+  .toLowerCase()
+  .replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i')
+  .replace(/ó|ö|ő/g,'o').replace(/ú|ü|ű/g,'u')
+  .replace(/[^a-z0-9]/g,'_');
+
+pdf.save(`Piercing_nyilatkozat_${safeName}.pdf`);
 
   document.getElementById('modal').classList.add('show');
 };
